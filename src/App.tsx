@@ -95,7 +95,88 @@ const App = () => {
                 {/* Other topic options */}
               </select>
             </div>
-            <div className="input-group">
+
+
+            {inputs.topic === "HiggsField"
+              &&
+              <div>
+                <div className="input-group">
+                  <label>Choose Particle</label>
+                  <select name="particle" value={inputs.particle} onChange={(e) => handleInputChange('particle', e.target.value)}>
+                    <option value="Electron">Electron</option>
+                    <option value="Neutron">Neutron</option>
+                    <option value="QuarkUp">Quark Up</option>
+                    <option value="QuarkDown">Quark Down</option>
+                    <option value="QuarkCharm">Quark Charm</option>
+                    <option value="QuarkStrange">Quark Strange</option>
+                  </select>
+                </div>
+                <div className="input-group">
+                  <label>Velocity</label>
+                  <input type="text" name="velocity" value={inputs.velocity} onChange={(e) => handleInputChange('velocity', e.target.value)} placeholder="Input Velocity" />
+
+                </div>
+                <div className="input-group">
+                  <label>Phi (φ)</label>
+                  <input type="text" name="phi" value={inputs.phi} onChange={(e) => handleInputChange('phi', e.target.value)} placeholder="Input Phi" />
+                </div>
+              </div>
+            }
+
+            {inputs.topic === "DiscreteCourierTransform"
+              &&
+              <div>
+                {/* <div className="input-group">
+                  <label>Choose Particle</label>
+                  <select name="particle" value={inputs.particle} onChange={(e) => handleInputChange('particle', e.target.value)}>
+                    <option value="Electron">Electron</option>
+                    <option value="Neutron">Neutron</option>
+                    <option value="QuarkUp">Quark Up</option>
+                    <option value="QuarkDown">Quark Down</option>
+                    <option value="QuarkCharm">Quark Charm</option>
+                    <option value="QuarkStrange">Quark Strange</option>
+                  </select>
+                </div>
+                <div className="input-group">
+                  <label>Velocity</label>
+                  <input type="text" name="velocity" value={inputs.velocity} onChange={(e) => handleInputChange('velocity', e.target.value)} placeholder="Input Velocity" /> */}
+
+                  {/* Other velocity options */}
+
+                {/* </div> */}
+                {/* <div className="input-group">
+                  <label>Phi (φ)</label>
+                  <input type="text" name="phi" value={inputs.phi} onChange={(e) => handleInputChange('phi', e.target.value)} placeholder="Input Phi" />
+                </div> */}
+              </div>
+            }
+
+            {inputs.topic === "MaxwellCoilField"
+              &&
+              <div>
+                {/* <div className="input-group">
+                  <label>Choose Particle</label>
+                  <select name="particle" value={inputs.particle} onChange={(e) => handleInputChange('particle', e.target.value)}>
+                    <option value="Electron">Electron</option>
+                    <option value="Neutron">Neutron</option>
+                    <option value="QuarkUp">Quark Up</option>
+                    <option value="QuarkDown">Quark Down</option>
+                    <option value="QuarkCharm">Quark Charm</option>
+                    <option value="QuarkStrange">Quark Strange</option>
+                  </select>
+                </div>
+                <div className="input-group">
+                  <label>Velocity</label>
+                  <input type="text" name="velocity" value={inputs.velocity} onChange={(e) => handleInputChange('velocity', e.target.value)} placeholder="Input Velocity" />
+
+                </div>
+                <div className="input-group">
+                  <label>Phi (φ)</label>
+                  <input type="text" name="phi" value={inputs.phi} onChange={(e) => handleInputChange('phi', e.target.value)} placeholder="Input Phi" />
+                </div> */}
+              </div>
+            }
+            {/* <div className="input-group">
               <label>Choose Particle</label>
               <select name="particle" value={inputs.particle} onChange={(e) => handleInputChange('particle', e.target.value)}>
                 <option value="Electron">Electron</option>
@@ -110,13 +191,11 @@ const App = () => {
               <label>Velocity</label>
               <input type="text" name="velocity" value={inputs.velocity} onChange={(e) => handleInputChange('velocity', e.target.value)} placeholder="Input Velocity" />
 
-              {/* Other velocity options */}
-
             </div>
             <div className="input-group">
               <label>Phi (φ)</label>
               <input type="text" name="phi" value={inputs.phi} onChange={(e) => handleInputChange('phi', e.target.value)} placeholder="Input Phi" />
-            </div>
+            </div> */}
             <div className="toggle-group">
               <label>
                 <input type="checkbox" checked={toggles.toolbar} onChange={() => handleToggleChange('toolbar')} />
