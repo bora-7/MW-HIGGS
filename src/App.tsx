@@ -3,6 +3,7 @@ import './App.css';
 import SimulationBox from './Components/SimulationBox';
 import SimulationBoxHiggs from './Components/simulationBoxHiggs';
 import SimulationBoxHiggsSimple from './Components/simulationBoxHiggsSimple';
+import MaxwellCoilField from './Components/MaxwellCallField';
 
 const DeveloperCard = ({ name, imageUrl, linkedInUrl, description }: any) => {
   return (
@@ -90,6 +91,7 @@ const App = () => {
               <select name="topic" value={inputs.topic} onChange={(e) => handleInputChange('topic', e.target.value)}>
                 <option value="HiggsField">Higgs Field</option>
                 <option value="DiscreteFourierTransform">Discrete Fourier Transform</option>
+                <option value="MaxwellCoilField">Maxwell Coil Field</option>
                 {/* Other topic options */}
               </select>
             </div>
@@ -130,6 +132,9 @@ const App = () => {
         </aside>
         <main className="main-content">
           <div className="graph-container">
+          {inputs.topic === "MaxwellCoilField" &&
+              <MaxwellCoilField />
+            }
             {inputs.topic === "HiggsField" &&
               <SimulationBoxHiggs refresh={refresh} inputs={inputs} />
             }
