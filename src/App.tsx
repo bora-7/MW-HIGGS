@@ -49,10 +49,10 @@ const App = () => {
   const developerData = [
     { name: 'Traian-Dumitru Caescu', imageUrl: 'https://media.licdn.com/dms/image/D5603AQEZd12aXMYNYQ/profile-displayphoto-shrink_800_800/0/1703183415520?e=1712793600&v=beta&t=dUba4jXqJHPnN-gBFgWcVR-vGCsezgnl1RRNAgnlnTs', linkedInUrl: 'https://www.linkedin.com/in/traian-dumitru-caescu/', description: 'Full Stack Developer' },
     { name: 'Na Wang', imageUrl: 'https://media.licdn.com/dms/image/D4E03AQHwG8X7lBIxsA/profile-displayphoto-shrink_800_800/0/1683915305861?e=1712793600&v=beta&t=ugsrJCTBJ-q_e1CiyHQqadoSpAnmtqcY9f_Gbq4v7Z8', linkedInUrl: 'https://www.linkedin.com/in/nwng/', description: 'Software Engineer' },
-    { name: 'Nguyen Tran Khoi Pham', imageUrl: 'https://media.licdn.com/dms/image/D4E03AQEG__KZH2XWhg/profile-displayphoto-shrink_800_800/0/1699967367678?e=1712793600&v=beta&t=dF-vL3KZym5R5uGsX5CQtrF9AbSiySukTA3pjc18cdQ', linkedInUrl: 'https://www.linkedin.com/in/phamtrankhoinguyen-noah/', description: 'Backend Developer' },
-    { name: 'Name4', imageUrl: 'LinkedIn-Image-Link', linkedInUrl: 'https://www.linkedin.com/in/name4', description: 'DevOps Engineer' },
-    { name: 'Name5', imageUrl: 'LinkedIn-Image-Link', linkedInUrl: 'https://www.linkedin.com/in/name5', description: 'UI/UX Designer' },
-    { name: 'Name6', imageUrl: 'LinkedIn-Image-Link', linkedInUrl: 'https://www.linkedin.com/in/name6', description: 'Project Manager' },
+    { name: 'Nguyen Tran Khoi Pham', imageUrl: 'https://media.licdn.com/dms/image/D4E03AQEG__KZH2XWhg/profile-displayphoto-shrink_800_800/0/1699967367678?e=1712793600&v=beta&t=dF-vL3KZym5R5uGsX5CQtrF9AbSiySukTA3pjc18cdQ', linkedInUrl: 'https://www.linkedin.com/in/phamtrankhoinguyen-noah/', description: 'Back End Developer' },
+    { name: 'Saffan Firdaus', imageUrl: 'https://media.licdn.com/dms/image/D5603AQH-0_sGTP5A-Q/profile-displayphoto-shrink_400_400/0/1688286180775?e=1712793600&v=beta&t=C2u2ulnvU6z68aSxsOl7cvjdQlisbT2p9NtP9MxJCSU', linkedInUrl: 'https://www.linkedin.com/in/saffanfirdaus/', description: 'Senior Designer' },
+    { name: 'Bora Akyuz', imageUrl: 'https://media.licdn.com/dms/image/D4E03AQH_EJLBPWL3Ww/profile-displayphoto-shrink_400_400/0/1693246453787?e=1712793600&v=beta&t=utL53NKta2-BScYMOH9Q6Hn5FSF_Z9gZCV-v1H3UnG4', linkedInUrl: 'https://www.linkedin.com/in/boraakyuz/', description: 'Software Engineer' },
+    { name: 'Moiz Imran', imageUrl: 'https://media.licdn.com/dms/image/D4E03AQGRQmm0srts4w/profile-displayphoto-shrink_400_400/0/1693647530890?e=1712793600&v=beta&t=edjxML5CBFhVdkZkOnaXhxen1Ma2ub4pgIUyK4nNFKQ', linkedInUrl: 'https://www.linkedin.com/in/moizimran/', description: 'Front End Developer' },
   ];
 
   const handleInputChange = (name: any, value: any) => {
