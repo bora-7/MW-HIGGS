@@ -132,33 +132,76 @@ const App = () => {
         </aside>
         <main className="main-content">
           <div className="graph-container">
-          {inputs.topic === "MaxwellCoilField" &&
+            {inputs.topic === "MaxwellCoilField" &&
               <MaxwellCoilField />
             }
             {inputs.topic === "HiggsField" &&
               <SimulationBoxHiggs refresh={refresh} inputs={inputs} />
             }
-            {inputs.topic == "DiscreteFourierTransform" &&
+            {inputs.topic === "DiscreteFourierTransform" &&
               <SimulationBox />
             }
 
           </div>
           <div className="info-section">
-            <article className="higgs-description">
-              <h2>Higgs Field - An Overview</h2>
-              <p>The Higgs field is an energy field that is thought to exist everywhere in the universe. The field is accompanied by a particle known as the Higgs boson, which in interaction with other particles gives them mass. This was first proposed by physicist Peter Higgs in the 1960s and was a pivotal part of the standard model of particle physics.</p>
-              <p>It wasn't until 2013 that the existence of the Higgs boson was confirmed by scientists at CERN's Large Hadron Collider. This discovery was a monumental step forward in our understanding of the universe's fundamental structure.</p>
-              <a href="https://en.wikipedia.org/wiki/Higgs_field" target="_blank" rel="noopener noreferrer">Learn more</a>
-            </article>
-            <aside className="references">
-              <h3>References</h3>
-              <ul>
-                <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Higgs Field</a></li>
-                <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The Higgs Boson and Its Discovery</a></li>
-                <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">The Standard Model of Particle Physics</a></li>
-                { }
-              </ul>
-            </aside>
+            {inputs.topic === "HiggsField" &&
+              <div>
+                <article className="higgs-description">
+                  <h2>Higgs Field - An Overview</h2>
+                  <p>The Higgs field is an energy field that is thought to exist everywhere in the universe. The field is accompanied by a particle known as the Higgs boson, which in interaction with other particles gives them mass. This was first proposed by physicist Peter Higgs in the 1960s and was a pivotal part of the standard model of particle physics.</p>
+                  <p>It wasn't until 2013 that the existence of the Higgs boson was confirmed by scientists at CERN's Large Hadron Collider. This discovery was a monumental step forward in our understanding of the universe's fundamental structure.</p>
+                  <a href="https://en.wikipedia.org/wiki/Higgs_field" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </article>
+                <aside className="references">
+                  <h3>References</h3>
+                  <ul>
+                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Higgs Field</a></li>
+                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The Higgs Boson and Its Discovery</a></li>
+                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">The Standard Model of Particle Physics</a></li>
+                  </ul>
+                </aside>
+              </div>
+            }
+
+            {inputs.topic === "DiscreteFourierTransform" &&
+              <div>
+                <article className="higgs-description">
+                  <h2> Discrete Fourier Transform - An Overview</h2>
+                  <p>The Higgs field is an energy field that is thought to exist everywhere in the universe. The field is accompanied by a particle known as the Higgs boson, which in interaction with other particles gives them mass. This was first proposed by physicist Peter Higgs in the 1960s and was a pivotal part of the standard model of particle physics.</p>
+                  <p>It wasn't until 2013 that the existence of the Higgs boson was confirmed by scientists at CERN's Large Hadron Collider. This discovery was a monumental step forward in our understanding of the universe's fundamental structure.</p>
+                  <a href="https://en.wikipedia.org/wiki/Higgs_field" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </article>
+                <aside className="references">
+                  <h3>References</h3>
+                  <ul>
+                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Higgs Field</a></li>
+                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The Higgs Boson and Its Discovery</a></li>
+                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">The Standard Model of Particle Physics</a></li>
+                  </ul>
+                </aside>
+              </div>
+            }
+
+            {inputs.topic === "MaxwellCoilField" &&
+              <div>
+                <article className="higgs-description">
+                  <h2>Maxwell Coil Field - An Overview</h2>
+                  <p>The Higgs field is an energy field that is thought to exist everywhere in the universe. The field is accompanied by a particle known as the Higgs boson, which in interaction with other particles gives them mass. This was first proposed by physicist Peter Higgs in the 1960s and was a pivotal part of the standard model of particle physics.</p>
+                  <p>It wasn't until 2013 that the existence of the Higgs boson was confirmed by scientists at CERN's Large Hadron Collider. This discovery was a monumental step forward in our understanding of the universe's fundamental structure.</p>
+                  <a href="https://en.wikipedia.org/wiki/Higgs_field" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </article>
+                <aside className="references">
+                  <h3>References</h3>
+                  <ul>
+                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Higgs Field</a></li>
+                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The Higgs Boson and Its Discovery</a></li>
+                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">The Standard Model of Particle Physics</a></li>
+                    { }
+                  </ul>
+                </aside>
+              </div>
+            }
+
           </div>
           <div className="developers-section">
             {developerData.map((developer, index) => (
