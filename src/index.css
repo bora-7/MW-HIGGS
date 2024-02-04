@@ -4,10 +4,11 @@
   padding: 0;
 }
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f4f4f4;
 }
 
@@ -29,12 +30,13 @@ body, html {
 .logo {
   font-size: 1.5rem;
   color: #61dafb;
+  margin-right: 30px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 
 .user-info {
@@ -70,18 +72,15 @@ nav a {
 .input-group label,
 .toggle-group label {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: #333;
 }
 
 .input-group select,
 .input-group input,
 .toggle-group input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 .toggle-group input {
@@ -145,7 +144,6 @@ nav a {
     padding: 1rem;
   }
 }
-
 
 .info-section {
   display: flex;
@@ -220,7 +218,6 @@ nav a {
   }
 }
 
-
 .developers-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -239,7 +236,7 @@ nav a {
 }
 
 .developer-avatar {
-  height: 200px; 
+  height: 200px;
   background-size: cover;
   background-position: center;
 }
@@ -250,7 +247,8 @@ nav a {
   flex: 1;
 }
 
-.developer-info h3, .developer-info p {
+.developer-info h3,
+.developer-info p {
   margin: 10px 0;
 }
 
