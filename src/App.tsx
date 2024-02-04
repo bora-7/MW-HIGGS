@@ -56,7 +56,6 @@ const App = () => {
     { name: 'Moiz Imran', imageUrl: 'https://media.licdn.com/dms/image/D4E03AQGRQmm0srts4w/profile-displayphoto-shrink_400_400/0/1693647530890?e=1712793600&v=beta&t=edjxML5CBFhVdkZkOnaXhxen1Ma2ub4pgIUyK4nNFKQ', linkedInUrl: 'https://www.linkedin.com/in/moizimran/', description: 'Front End Developer' },
   ];
 
-
   const handleInputChange = (name: any, value: any) => {
     setInputs({ ...inputs, [name]: value });
     console.log(inputs);
