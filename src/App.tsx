@@ -167,16 +167,21 @@ const App = () => {
               <div>
                 <article className="higgs-description">
                   <h2> Discrete Fourier Transform - An Overview</h2>
-                  <p>The Higgs field is an energy field that is thought to exist everywhere in the universe. The field is accompanied by a particle known as the Higgs boson, which in interaction with other particles gives them mass. This was first proposed by physicist Peter Higgs in the 1960s and was a pivotal part of the standard model of particle physics.</p>
-                  <p>It wasn't until 2013 that the existence of the Higgs boson was confirmed by scientists at CERN's Large Hadron Collider. This discovery was a monumental step forward in our understanding of the universe's fundamental structure.</p>
-                  <a href="https://en.wikipedia.org/wiki/Higgs_field" target="_blank" rel="noopener noreferrer">Learn more</a>
+                  <p>
+                    The Discrete Fourier Transform (DFT) is a mathematical technique used to transform a sequence of complex or real numerical values into a frequency spectrum.
+                  </p>
+                  <p>
+                    Essentially, it analyzes the frequencies present in the original sequence. The DFT is particularly useful in signal processing, image processing, and solving partial differential equations, among other applications.
+                  </p>
+
+                  <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform" target="_blank" rel="noopener noreferrer">Learn more</a>
                 </article>
                 <aside className="references">
                   <h3>References</h3>
                   <ul>
-                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Higgs Field</a></li>
-                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The Higgs Boson and Its Discovery</a></li>
-                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">The Standard Model of Particle Physics</a></li>
+                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Discrete Fourier Transform</a></li>
+                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The origins of Discrete Fourier Transform</a></li>
+                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">Discrete Fourier Transform in Digital Forensics</a></li>
                   </ul>
                 </aside>
               </div>
