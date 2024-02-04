@@ -1,4 +1,4 @@
-### Getting Started with Create React App
+### EnViz: Physics Simplified
 This is EnViz, a physics simulator for educational purposes. It can currently simulate Higgs Field, Discrete Fourier Transform and Maxwell Coil Field!
 
 You can host it locally by using `npm start`.
