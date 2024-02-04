@@ -13,7 +13,7 @@ let y_loc = 0
 const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
   const WIDTH = 20;
   const HEIGHT = 20;
-  const DIFFUSIONRADIUS = 2;
+  const DIFFUSIONRADIUS = 500;
   const VEV = 246000; // Vacuum Expectation Value (eV)
   const particle = inputs.particle
   const velocity = inputs.velocity; // This could also be dynamic
@@ -39,14 +39,13 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
     const momentum = mass * velocity;
     const p1 = 0.5 * (mass ** 2) * (Math.sqrt(momentum ** 2 + mass ** 2)) ** 2;
     const p2 = VEV * 2;
-    const A = 1;
-    const B = A * VEV ** 2;
-    // const B = 500000000000;
+    const A = 5;
+    const B = A**11;
     const a_quad = A;
     const b_quad = -2 * B;
     const c_quad = kinetic_energy - p1 - p2;
     const Phi_2 = (-b_quad + Math.sqrt((b_quad ** 2) - 4 * a_quad * c_quad)) / (2 * a_quad);
-    const energy = Phi_2;
+    const energy = Math.ceil(Phi_2/100);
 
     const df_energy: number[][] = Array.from(Array(WIDTH), () => new Array(HEIGHT).fill(0));
 
@@ -59,7 +58,7 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
     for (let x = 0; x < WIDTH; x++) {
       for (let y = 0; y < HEIGHT; y++) {
         if (distFromParticle(x, y, x_loc, y_loc) <= DIFFUSIONRADIUS) {
-          df_energy[x][y] = VEV + (energy - distFromParticle(x, y, x_loc, y_loc) * 100)
+          df_energy[x][y] = VEV + (Math.ceil(energy/distFromParticle(x, y, x_loc, y_loc)) * 5)
         } else {
           df_energy[x][y] = VEV;
         }
