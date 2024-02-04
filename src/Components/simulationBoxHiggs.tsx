@@ -7,9 +7,6 @@ type Props = {
   refresh: boolean;
 }
 
-let x_loc = 10
-let y_loc = 0
-
 const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
   const WIDTH = 20;
   const HEIGHT = 20;
@@ -18,14 +15,24 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
   const particle = inputs.particle
   const velocity = inputs.velocity; // This could also be dynamic
 
-  const [data, setData] = useState<any[]>([])
+  let x_loc = 10;
+  const [y_loc, setYLoc] = useState(0); // Convert y_loc to a state variable
+
+  const [data, setData] = useState<any[]>([]);
   const [time, setTime] = useState<number>(0);
+
+  useEffect(() => {
+    // Logic to increase y_loc
+    setYLoc((prevYLoc) => prevYLoc + 1);
+  }, [refresh]); // This effect depends on the refresh prop
+
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTime((prevTime) => prevTime + 0.1); // Adjust time increment for animation speed
     }, 100); // Adjust interval for frame rate
 
+    
     const Particles_Dict = {
       "Electron": 9.11e-31,
       "Neutron": 1.674e-27,
@@ -53,8 +60,6 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
       return Math.sqrt((x - x_loc) ** 2 + (y - y_loc) ** 2);
     };
 
-    y_loc += 1
-
     for (let x = 0; x < WIDTH; x++) {
       for (let y = 0; y < HEIGHT; y++) {
         if (distFromParticle(x, y, x_loc, y_loc) <= DIFFUSIONRADIUS) {
@@ -75,6 +80,7 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
     const trajectoryX = Array.from({ length: WIDTH }, (_, i) => i); // Straight line across X-axis
     const trajectoryY = Array(WIDTH).fill(HEIGHT / 2); // Center of Y-axis
 
+    
     setData([
       // Energy surface
       {
@@ -101,9 +107,10 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
           width: 6,
         },
       },
-
     ]);
   }, [inputs, particle, velocity, refresh]); // Empty dependency array means this effect runs once on mount
+
+
 
   return (
     <Plot

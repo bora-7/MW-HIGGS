@@ -32,7 +32,7 @@ export type FormInput = {
 const App = () => {
   const [refresh, setRefresh] = useState<boolean>(false);
   const [inputs, setInputs] = useState<FormInput>({
-    topic: 'Higgs Field',
+    topic: 'HiggsField',
     particle: 'Neutron',
     velocity: 50000000,
     phi: 0,
@@ -88,7 +88,8 @@ const App = () => {
             <div className="input-group">
               <label>Topic</label>
               <select name="topic" value={inputs.topic} onChange={(e) => handleInputChange('topic', e.target.value)}>
-                <option value="Higgs Field">Higgs Field</option>
+                <option value="HiggsField">Higgs Field</option>
+                <option value="DiscreteFourierTransform">Discrete Fourier Transform</option>
                 {/* Other topic options */}
               </select>
             </div>
@@ -129,7 +130,13 @@ const App = () => {
         </aside>
         <main className="main-content">
           <div className="graph-container">
-            <SimulationBoxHiggs refresh={refresh} inputs={inputs} />
+            {inputs.topic === "HiggsField" &&
+              <SimulationBoxHiggs refresh={refresh} inputs={inputs} />
+            }
+            {inputs.topic == "DiscreteFourierTransform" &&
+              <SimulationBox />
+            }
+
           </div>
           <div className="info-section">
             <article className="higgs-description">
