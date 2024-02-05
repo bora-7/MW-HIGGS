@@ -1,6 +1,8 @@
 ### EnViz: Physics Simplified
 This is EnViz, a physics simulator for educational purposes. It can currently simulate Higgs Field, Discrete Fourier Transform and Maxwell Coil Field!
 
+This project was made during IcHack24 by me and the following people: @nwng04, @Moiz-I, @khoinguyenpham04, @Traian-Caescu
+
 You can host it locally by using `npm start`.
 
 ### Development
