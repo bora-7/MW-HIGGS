@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import SimulationBox from './Components/SimulationBox';
-import SimulationBoxHiggs from './Components/simulationBoxHiggs';
+import SimulationBoxHiggs from './Components/simulationBoxHiggs copy';
 import SimulationBoxHiggsSimple from './Components/simulationBoxHiggsSimple';
 import MaxwellCoilField from './Components/MaxwellCallField';
 
