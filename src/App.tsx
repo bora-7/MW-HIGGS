@@ -95,28 +95,45 @@ const App = () => {
                 {/* Other topic options */}
               </select>
             </div>
-            <div className="input-group">
-              <label>Choose Particle</label>
-              <select name="particle" value={inputs.particle} onChange={(e) => handleInputChange('particle', e.target.value)}>
-                <option value="Electron">Electron</option>
-                <option value="Neutron">Neutron</option>
-                <option value="QuarkUp">Quark Up</option>
-                <option value="QuarkDown">Quark Down</option>
-                <option value="QuarkCharm">Quark Charm</option>
-                <option value="QuarkStrange">Quark Strange</option>
-              </select>
-            </div>
-            <div className="input-group">
-              <label>Velocity</label>
-              <input type="text" name="velocity" value={inputs.velocity} onChange={(e) => handleInputChange('velocity', e.target.value)} placeholder="Input Velocity" />
 
-              {/* Other velocity options */}
 
-            </div>
-            <div className="input-group">
-              <label>Phi (φ)</label>
-              <input type="text" name="phi" value={inputs.phi} onChange={(e) => handleInputChange('phi', e.target.value)} placeholder="Input Phi" />
-            </div>
+            {inputs.topic === "HiggsField"
+              &&
+              <div>
+                <div className="input-group">
+                  <label>Choose Particle</label>
+                  <select name="particle" value={inputs.particle} onChange={(e) => handleInputChange('particle', e.target.value)}>
+                    <option value="Electron">Electron</option>
+                    <option value="Neutron">Neutron</option>
+                    <option value="QuarkUp">Quark Up</option>
+                    <option value="QuarkDown">Quark Down</option>
+                    <option value="QuarkCharm">Quark Charm</option>
+                    <option value="QuarkStrange">Quark Strange</option>
+                  </select>
+                </div>
+                <div className="input-group">
+                  <label>Velocity</label>
+                  <input type="text" name="velocity" value={inputs.velocity} onChange={(e) => handleInputChange('velocity', e.target.value)} placeholder="Input Velocity" />
+
+                </div>
+                <div className="input-group">
+                  <label>Phi (φ)</label>
+                  <input type="text" name="phi" value={inputs.phi} onChange={(e) => handleInputChange('phi', e.target.value)} placeholder="Input Phi" />
+                </div>
+              </div>
+            }
+
+            {inputs.topic === "DiscreteCourierTransform"
+              &&
+              <div>
+              </div>
+            }
+
+            {inputs.topic === "MaxwellCoilField"
+              &&
+              <div>
+              </div>
+            }
             <div className="toggle-group">
               <label>
                 <input type="checkbox" checked={toggles.toolbar} onChange={() => handleToggleChange('toolbar')} />
@@ -167,16 +184,21 @@ const App = () => {
               <div>
                 <article className="higgs-description">
                   <h2> Discrete Fourier Transform - An Overview</h2>
-                  <p>The Higgs field is an energy field that is thought to exist everywhere in the universe. The field is accompanied by a particle known as the Higgs boson, which in interaction with other particles gives them mass. This was first proposed by physicist Peter Higgs in the 1960s and was a pivotal part of the standard model of particle physics.</p>
-                  <p>It wasn't until 2013 that the existence of the Higgs boson was confirmed by scientists at CERN's Large Hadron Collider. This discovery was a monumental step forward in our understanding of the universe's fundamental structure.</p>
-                  <a href="https://en.wikipedia.org/wiki/Higgs_field" target="_blank" rel="noopener noreferrer">Learn more</a>
+                  <p>
+                    The Discrete Fourier Transform (DFT) is a mathematical technique used to transform a sequence of complex or real numerical values into a frequency spectrum.
+                  </p>
+                  <p>
+                    Essentially, it analyzes the frequencies present in the original sequence. The DFT is particularly useful in signal processing, image processing, and solving partial differential equations, among other applications.
+                  </p>
+
+                  <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform" target="_blank" rel="noopener noreferrer">Learn more</a>
                 </article>
                 <aside className="references">
                   <h3>References</h3>
                   <ul>
-                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Higgs Field</a></li>
-                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The Higgs Boson and Its Discovery</a></li>
-                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">The Standard Model of Particle Physics</a></li>
+                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Discrete Fourier Transform</a></li>
+                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The origins of Discrete Fourier Transform</a></li>
+                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">Discrete Fourier Transform in Digital Forensics</a></li>
                   </ul>
                 </aside>
               </div>
@@ -186,16 +208,16 @@ const App = () => {
               <div>
                 <article className="higgs-description">
                   <h2>Maxwell Coil Field - An Overview</h2>
-                  <p>The Higgs field is an energy field that is thought to exist everywhere in the universe. The field is accompanied by a particle known as the Higgs boson, which in interaction with other particles gives them mass. This was first proposed by physicist Peter Higgs in the 1960s and was a pivotal part of the standard model of particle physics.</p>
-                  <p>It wasn't until 2013 that the existence of the Higgs boson was confirmed by scientists at CERN's Large Hadron Collider. This discovery was a monumental step forward in our understanding of the universe's fundamental structure.</p>
-                  <a href="https://en.wikipedia.org/wiki/Higgs_field" target="_blank" rel="noopener noreferrer">Learn more</a>
+                  <p>The Maxwell coil field refers to the magnetic field configuration generated by a specific arrangement of coils, known as Maxwell coils. </p>
+                  <p>These coils are designed to produce a very uniform magnetic field in a given volume of space, which is crucial for experiments requiring precise magnetic field control, such as in magnetic resonance imaging (MRI) or atomic physics experiments.</p>
+                  <a href="https://en.wikipedia.org/wiki/Maxwell_coil" target="_blank" rel="noopener noreferrer">Learn more</a>
                 </article>
                 <aside className="references">
                   <h3>References</h3>
                   <ul>
-                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Higgs Field</a></li>
-                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The Higgs Boson and Its Discovery</a></li>
-                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">The Standard Model of Particle Physics</a></li>
+                    <li><a href="https://example.com/reference1" target="_blank" rel="noopener noreferrer">Detailed Explanation of the Maxwell Coil Field</a></li>
+                    <li><a href="https://example.com/reference2" target="_blank" rel="noopener noreferrer">The origins of the Maxwell Coil Field</a></li>
+                    <li><a href="https://example.com/reference3" target="_blank" rel="noopener noreferrer">Maxwell coil field in 3D</a></li>
                     { }
                   </ul>
                 </aside>
