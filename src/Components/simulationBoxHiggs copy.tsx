@@ -5,6 +5,7 @@ import { FormInput } from '../App';
 type Props = {
   inputs: FormInput;
   refresh: boolean;
+  counter: number;
 }
 
 const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
@@ -55,6 +56,7 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
 
     energy *= 10e38;
 
+    
     for (let x = 0; x < WIDTH; x++) {
       for (let y = 0; y < HEIGHT; y++) {
         let dx = x_loc - x;
@@ -70,6 +72,8 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
         df_energy[y_loc][x_loc] = energy;
       }
     }
+    
+    //df_energy[y_loc][x_loc] = energy;
     
     console.log(df_energy);
     console.log(energy);
@@ -115,10 +119,10 @@ const ParticleEnergyPlot = ({ inputs, refresh }: Props) => {
     <Plot
       data={data}
       layout={{
-        title: 'Particle Energy Distribution around Neutron with Higgs Field Effect',
+        title: 'Mass of Electron given by the Higgs Field',
         autosize: true,
         width: 1000,
-        height: 700
+        height: 700,
       }}
     />
   );

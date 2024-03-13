@@ -34,7 +34,7 @@ const App = () => {
   const [refresh, setRefresh] = useState<boolean>(false);
   const [inputs, setInputs] = useState<FormInput>({
     topic: 'HiggsField',
-    particle: 'Neutron',
+    particle: 'Electron',
     velocity: 50000000,
     phi: 0,
   });
@@ -47,6 +47,8 @@ const App = () => {
     normalization: false,
     customScaler: '2x',
   });
+
+
   const developerData = [
     { name: 'Traian-Dumitru Caescu', imageUrl: 'https://media.licdn.com/dms/image/D5603AQEZd12aXMYNYQ/profile-displayphoto-shrink_800_800/0/1703183415520?e=1712793600&v=beta&t=dUba4jXqJHPnN-gBFgWcVR-vGCsezgnl1RRNAgnlnTs', linkedInUrl: 'https://www.linkedin.com/in/traian-dumitru-caescu/', description: 'Full Stack Developer' },
     { name: 'Na Wang', imageUrl: 'https://media.licdn.com/dms/image/D4E03AQHwG8X7lBIxsA/profile-displayphoto-shrink_800_800/0/1683915305861?e=1712793600&v=beta&t=ugsrJCTBJ-q_e1CiyHQqadoSpAnmtqcY9f_Gbq4v7Z8', linkedInUrl: 'https://www.linkedin.com/in/nwng/', description: 'Software Engineer' },
@@ -69,6 +71,18 @@ const App = () => {
     console.log('Playing with state:', { inputs, toggles });
     setRefresh(!refresh)
   };
+
+  useEffect(() => {
+    const handlePlayAndScheduleNextCall = () => {
+      console.log('Before handlePlay');
+      handlePlay();
+      console.log('After handlePlay');
+      setTimeout(handlePlayAndScheduleNextCall, 500);
+    };
+  
+    handlePlayAndScheduleNextCall();
+  }, []);
+
 
   return (
     <div className="app">
@@ -153,7 +167,7 @@ const App = () => {
               <MaxwellCoilField />
             }
             {inputs.topic === "HiggsField" &&
-              <SimulationBoxHiggs refresh={refresh} inputs={inputs} />
+              <SimulationBoxHiggs refresh={refresh} inputs={inputs} counter={0} />
             }
             {inputs.topic === "DiscreteFourierTransform" &&
               <SimulationBox />
